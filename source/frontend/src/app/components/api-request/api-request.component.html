@@ -1,0 +1,83 @@
+<div class="card mb-3">
+  <div class="card-header">
+    <div class="d-flex align-items-center">
+      <div class="flex-grow-1 title" (click)="isCollapsed = !isCollapsed">
+        <span class="fw-semibold">{{apiRequest.name}}</span>
+        <small class="text-secondary ms-2">{{apiRequest.summary}}</small>
+      </div>
+      <button type="button" class="btn btn-secondary btn-sm" (click)="execute()">
+        Execute
+      </button>
+    </div>
+  </div>
+  <div [(ngbCollapse)]="isCollapsed" class="card-body">
+
+    <ng-container *ngIf="executionTrace$ | async as executionTrace">
+      <div class="row row-cols-2 gy-2 pb-3">
+        <div class="col-lg-1 col-2"></div>
+        <div class="col-lg-11 col-10">
+          <ul ngbNav #nav="ngbNav" class="nav-tabs">
+            <li *ngFor="let databaseTrace of executionTrace.databaseTraces; index as index" [ngbNavItem]="index">
+              <button ngbNavLink>{{databaseTrace.databaseType | capitalize}}</button>
+
+              <ng-template ngbNavContent>
+                <div class="row row-cols-2 gy-2">
+
+                  <!-- Code  -->
+                  <div class="col-lg-1 col-2">
+                    <div class="source-title">Code:</div>
+                  </div>
+                  <div class="col-lg-11 col-10">
+                    <div class="position-relative">
+                      <pre class="source csharp"><code [highlight]="executionTrace.sourcecode" [languages]="['C#']"></code></pre>
+                      <a class="copy text-secondary" ngxClipboard [cbContent]="executionTrace.sourcecode">
+                        <ng-container *ngTemplateOutlet="biCopy"/>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- SQL -->
+                  <ng-container *ngIf="databaseTrace.sqlCommandsFormatted">
+                    <div class="col-lg-1 col-2">
+                      <div class="source-title">SQL:</div>
+                    </div>
+                    <div class="col-lg-11 col-10">
+                      <div class="position-relative">
+                        <pre class="source sql"><code [highlight]="databaseTrace.sqlCommandsFormatted" [languages]="['SQL']"></code></pre>
+                        <a class="copy text-secondary" ngxClipboard [cbContent]="databaseTrace.sqlCommandsFormatted">
+                          <ng-container *ngTemplateOutlet="biCopy"/>
+                        </a>
+                      </div>
+                    </div>
+
+                    <!-- Result -->
+                    <div class="col-lg-1 col-2">
+                      <div class="source-title">Result:</div>
+                    </div>
+                    <div class="col-lg-11 col-10">
+                      <div class="position-relative">
+                        <ngx-json-viewer class="source json" [json]="databaseTrace.result" [expanded]="false"></ngx-json-viewer>
+                        <a class="copy text-secondary" ngxClipboard [cbContent]="databaseTrace.resultJson">
+                          <ng-container *ngTemplateOutlet="biCopy"/>
+                        </a>
+                      </div>
+                    </div>
+                  </ng-container>
+                </div>
+              </ng-template>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div [ngbNavOutlet]="nav"></div>
+    </ng-container>
+
+  </div>
+</div>
+
+<ng-template #biCopy>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-copy" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2Zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H6ZM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1H2Z"/>
+  </svg>
+</ng-template>

@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FS.EntityFramework.DeepDive", "FS.EntityFramework.DeepDive\FS.EntityFramework.DeepDive.csproj", "{089229A1-E801-4ED9-909D-9FCB56DD65AC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FS.EntityFramework.DeepDive.Core", "FS.EntityFramework.DeepDive.Core\FS.EntityFramework.DeepDive.Core.csproj", "{C2DDB008-E577-442C-B8EF-4B3CE5A401F1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FS.EntityFramework.DeepDive.Repository", "FS.EntityFramework.DeepDive.Repository\FS.EntityFramework.DeepDive.Repository.csproj", "{41438437-0ECA-499B-A2AC-36A5F85BE7AD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FS.EntityFramework.DeepDive.Repository.MySql", "FS.EntityFramework.DeepDive.Repository.MySql\FS.EntityFramework.DeepDive.Repository.MySql.csproj", "{74555588-0900-494F-B77D-18862F56EEEB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FS.EntityFramework.DeepDive.Repository.Sqlite", "FS.EntityFramework.DeepDive.Repository.Sqlite\FS.EntityFramework.DeepDive.Repository.Sqlite.csproj", "{65FADC15-36E0-4E95-8BC6-E4638A4E91CE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FS.EntityFramework.DeepDive.Repository.SqlServer", "FS.EntityFramework.DeepDive.Repository.SqlServer\FS.EntityFramework.DeepDive.Repository.SqlServer.csproj", "{1058985B-41CD-476F-820B-CD25A96EFC62}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{089229A1-E801-4ED9-909D-9FCB56DD65AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{089229A1-E801-4ED9-909D-9FCB56DD65AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{089229A1-E801-4ED9-909D-9FCB56DD65AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{089229A1-E801-4ED9-909D-9FCB56DD65AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2DDB008-E577-442C-B8EF-4B3CE5A401F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2DDB008-E577-442C-B8EF-4B3CE5A401F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2DDB008-E577-442C-B8EF-4B3CE5A401F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2DDB008-E577-442C-B8EF-4B3CE5A401F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41438437-0ECA-499B-A2AC-36A5F85BE7AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41438437-0ECA-499B-A2AC-36A5F85BE7AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41438437-0ECA-499B-A2AC-36A5F85BE7AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41438437-0ECA-499B-A2AC-36A5F85BE7AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74555588-0900-494F-B77D-18862F56EEEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74555588-0900-494F-B77D-18862F56EEEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74555588-0900-494F-B77D-18862F56EEEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74555588-0900-494F-B77D-18862F56EEEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65FADC15-36E0-4E95-8BC6-E4638A4E91CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65FADC15-36E0-4E95-8BC6-E4638A4E91CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65FADC15-36E0-4E95-8BC6-E4638A4E91CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65FADC15-36E0-4E95-8BC6-E4638A4E91CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1058985B-41CD-476F-820B-CD25A96EFC62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1058985B-41CD-476F-820B-CD25A96EFC62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1058985B-41CD-476F-820B-CD25A96EFC62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1058985B-41CD-476F-820B-CD25A96EFC62}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {847A2144-0BE1-4AE2-A6BB-B8CE87F67276}
+	EndGlobalSection
+EndGlobal

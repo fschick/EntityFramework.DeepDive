@@ -1,0 +1,59 @@
+:host {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+}
+
+.zoom {
+
+  &:before {
+    @media (min-resolution: 48dpi) {
+      content: '(50%)';
+    }
+
+    @media (min-resolution: 64dpi) {
+      content: '(67%)';
+    }
+
+    @media (min-resolution: 72dpi) {
+      content: '(75%)';
+    }
+
+    @media (min-resolution: 76dpi) {
+      content: '(80%)';
+    }
+
+    @media (min-resolution: 86dpi) {
+      content: '(90%)';
+    }
+
+    @media (min-resolution: 96dpi) {
+      content: '(100%)';
+    }
+
+    @media (min-resolution: 105dpi) {
+      content: '(110%)';
+    }
+
+    @media (min-resolution: 105dpi) {
+      content: '(110%)';
+    }
+
+    @media (min-resolution: 120dpi) {
+      content: '(125%)';
+    }
+
+    @media (min-resolution: 144dpi) {
+      content: '(150%)';
+    }
+
+    @media (min-resolution: 168dpi) {
+      content: '(175%)';
+    }
+
+    @media (min-resolution: 192dpi) {
+      content: '(200%)';
+    }
+  }
+}

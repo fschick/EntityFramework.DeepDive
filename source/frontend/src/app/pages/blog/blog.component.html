@@ -1,0 +1,6 @@
+<div *ngFor="let traceableApiGroup of traceableApiGroups$ | async">
+  <h3 class="mb-3">{{traceableApiGroup.name}}</h3>
+  <div *ngFor="let traceableApiRequest of traceableApiGroup.requests">
+    <app-api-request [apiRequest]="traceableApiRequest"/>
+  </div>
+</div>

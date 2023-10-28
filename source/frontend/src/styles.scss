@@ -1,0 +1,58 @@
+/* ----------------------------------------- */
+/* Bootstrap
+/* ----------------------------------------- */
+@import "styles/overrides";
+@import "styles/bootstrap";
+/* ----------------------------------------- */
+
+/* ----------------------------------------- */
+/* Highlight.js
+/* ----------------------------------------- */
+@import "highlight.js/styles/vs.css";
+
+/* ----------------------------------------- */
+/* Main layout
+/* ----------------------------------------- */
+body {
+  /* Margin bottom == footer height */
+  margin-bottom: 3rem !important;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+
+  // Fix flickering when page scrollbar appears/disappears (e.g. modal dialog is opened).
+  // See https://stackoverflow.com/a/59407573/1271211, https://aykevl.nl/2014/09/fix-jumping-scrollbar
+  margin-left: calc(100vw - 100%);
+  margin-right: 0;
+  overflow-y: auto;
+}
+
+/* ----------------------------------------- */
+/* Custom extensions
+/* ----------------------------------------- */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+/* ----------------------------------------- */
+/* ngx-json-viewer
+/* ----------------------------------------- */
+.ngx-json-viewer {
+  background-color: #F8F8F8;
+  padding: .25rem 1rem .25rem 0;
+}
+
+.segment-main {
+  overflow: hidden;
+}

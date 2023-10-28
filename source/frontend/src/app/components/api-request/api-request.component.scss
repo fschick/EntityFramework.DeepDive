@@ -1,0 +1,44 @@
+.card-header {
+  border-bottom: 0;
+}
+
+.card-body {
+  border-top: var(--bs-card-border-width) solid var(--bs-card-border-color);
+}
+
+.title {
+  cursor: pointer;
+}
+
+.source-title {
+  padding: .25rem 0;
+}
+
+.source {
+  max-height: 80vh;
+
+  & > code, &.json {
+    background-color: #F8F8F8;
+    min-height: 3.5rem;
+  }
+
+  &.json {
+    display: block;
+    background-color: #F8F8F8;
+    min-height: 3.5rem;
+  }
+}
+
+pre code.hljs {
+  padding: .5rem 1rem;
+}
+
+.copy {
+  position: absolute;
+  right: 1rem;
+  bottom: .75rem;
+
+  background-color: #F6F6F6;
+  padding: 0 0.4rem 0.25rem 0.4rem;
+  box-shadow: 2px 2px 10px 0 #E8E8E8;
+}

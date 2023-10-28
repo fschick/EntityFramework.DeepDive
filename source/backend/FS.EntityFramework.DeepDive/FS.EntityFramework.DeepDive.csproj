@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(MSBuildProjectName).xml</DocumentationFile>
+    <InheritDocEnabled>true</InheritDocEnabled>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\forntend\dist\ef-deep-dive\browser\**\*">
+      <Link>WebUi\%(RecursiveDir)/%(FileName)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bogus" Version="34.0.2" />
+    <PackageReference Include="Humanizer.Core" Version="2.14.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="8.0.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.8.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.8.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Workspaces.Common" Version="4.8.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FS.EntityFramework.DeepDive.Core\FS.EntityFramework.DeepDive.Core.csproj" />
+    <ProjectReference Include="..\FS.EntityFramework.DeepDive.Repository.MySql\FS.EntityFramework.DeepDive.Repository.MySql.csproj" />
+    <ProjectReference Include="..\FS.EntityFramework.DeepDive.Repository.Sqlite\FS.EntityFramework.DeepDive.Repository.Sqlite.csproj" />
+    <ProjectReference Include="..\FS.EntityFramework.DeepDive.Repository.SqlServer\FS.EntityFramework.DeepDive.Repository.SqlServer.csproj" />
+    <ProjectReference Include="..\FS.EntityFramework.DeepDive.Repository\FS.EntityFramework.DeepDive.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
